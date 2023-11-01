@@ -9,14 +9,14 @@ Database:  NoSQL (e.g., MongoDB)
 Front-end: HTML, CSS, JavaScript or Angular.
 
 ### Features
-Define mapping fields for Excel templates.
-Automatically generate Excel templates based on field definitions.
-Download, fill, and upload templates.
-Store uploaded data in a database linked to the organization.
-Display uploaded data in a table.
+1. Define mapping fields for Excel templates.
+2. Automatically generate Excel templates based on field definitions.
+3. Download, fill, and upload templates.
+4. Store uploaded data in a database linked to the organization.
+5. Display uploaded data in a table.
 
 ### Setup and Usage
-Clone the public Git repository.
-Configure the database.
-Build and run the Java application.
-Serve the front-end by writing ng serve command.
+1. Clone the public Git repository.
+2. Configure the database.
+3. Build and run the Java application.
+4. Serve the front-end by writing ng serve command.
