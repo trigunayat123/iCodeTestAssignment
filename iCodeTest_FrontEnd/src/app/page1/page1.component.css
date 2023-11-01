@@ -1,0 +1,60 @@
+div {
+    text-align: center;
+    padding: 5px;
+}
+
+
+input {
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f3f3c8;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: large;
+}
+
+
+button:last-of-type {
+    background-color: #28a745;
+}
+
+
+div>div {
+    margin-bottom: 3px;
+}
+
+
+div>div:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+
+button:last-of-type {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+h1 {
+    margin-top: 20px;
+    margin-left: 37%;
+}
+
+#nextButton {
+    margin-left: 70%;
+}

@@ -1,0 +1,29 @@
+<h1 id="headerPage1">View and Actions</h1>
+
+<div class="div1">
+  <h2 id="div1header">Actions</h2>
+  <button (click)="downloadTemplate()">Download Template</button>
+  <button (click)="uploadTemplate()">Upload Template</button>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+
+<div class="div2" *ngIf="isDiv2Visible">
+  <h2 class="div2header">Data Entered</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th *ngFor="let pair of keyValuePairs">{{ pair.key }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td *ngFor="let pair of keyValuePairs">{{ pair.value }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+ 
