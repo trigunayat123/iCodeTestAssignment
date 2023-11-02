@@ -27,6 +27,7 @@ export class Page1Component {
       (response: any) => {
         this.keyValuePairs = Object.entries(response).map(([key, value]) => ({ key, value: value as string }));
         console.log("Key-Value Pairs", this.keyValuePairs);
+        console.log("Hiii");
       },
       (error) => {
         this.toastr.error("Some Error Occurred !!", "", { timeOut: 2000 });
