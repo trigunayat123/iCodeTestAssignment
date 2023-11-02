@@ -1,11 +1,9 @@
 <h1>Create your Template</h1>
 <div>
-  <div *ngFor="let pair of keyValuePairs; let i = index">
+  <div *ngFor="let pair of keyValuePairs; let i = index" class="key-value-pair">
     <input [(ngModel)]="pair.key" placeholder="Field" />
-    <input [(ngModel)]="pair.value" placeholder="Value" />
-    <button (click)="removeKeyValuePair(i)">Remove</button>
+    <input [(ngModel)]="pair.value" placeholder="Value"/>
   </div>
   <button (click)="addKeyValuePair()">+</button>
 </div>
 <button (click)="navigateToPage2()" id="nextButton">Next</button>
- 

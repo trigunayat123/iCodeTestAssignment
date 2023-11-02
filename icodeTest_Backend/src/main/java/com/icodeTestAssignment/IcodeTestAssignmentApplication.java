@@ -8,6 +8,6 @@ public class IcodeTestAssignmentApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(IcodeTestAssignmentApplication.class, args);
+		System.out.println("entry point");
 	}
 }
- 
