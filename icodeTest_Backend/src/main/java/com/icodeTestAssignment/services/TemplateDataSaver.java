@@ -17,11 +17,17 @@ public class TemplateDataSaver {
 			throw new NullPointerException("Please define some fields and their values");
 		for (String field : templateData.keySet()) {
 			if (templateData.get(field) == null || templateData.get(field).trim().isEmpty())
-				throw new NullPointerException("All fields must have valid values. Please provide values for all fields.");
+				throw new NullPointerException(
+						"All fields must have valid values. Please provide values for all fields.");
 		}
 		Document templateDocument = new Document();
 		for (String field : templateData.keySet())
 			templateDocument.append(field, templateData.get(field));
 		mongoDbService.saveToMongoDB(templateDocument);
+	}
+
+	public Map<String, String> getTemplateMappings() {
+		Map<String, String> templateMappings = mongoDbService.templateMappingProvider();
+		return templateMappings;
 	}
 }

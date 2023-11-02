@@ -10,6 +10,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -55,5 +56,11 @@ public class TemplateController {
 		System.out.println("upload!!!!!!!!");
 		templateDataSaver.save(templateData);
 		return ResponseEntity.ok(new ApiResponse("Data Successfully Saved !!"));
+	}
+
+	@GetMapping("/mappings")
+	public ResponseEntity<Map<String, String>> templateMappingHandler() {
+		Map<String, String> definedTemplateMappings = templateDataSaver.getTemplateMappings();
+		return ResponseEntity.ok(definedTemplateMappings);
 	}
 }

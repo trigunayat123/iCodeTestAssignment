@@ -12,11 +12,28 @@ export class Page1Component {
      private router: Router,
      private  page1Service: Page1Service) {}
 
+     ngOnInit(): void {
+      this.loadtemplateMappings(); // Fetch recent notes when the component initializes
+    }   
+
   keyValuePairs: { key: string; value: string }[] = [];
 
   addKeyValuePair() {
     this.keyValuePairs.push({ key: '', value: '' });
   }
+
+  loadtemplateMappings() {
+    this.page1Service.getTemplateMappings().subscribe(
+      (response: any) => {
+        this.keyValuePairs = Object.entries(response).map(([key, value]) => ({ key, value: value as string }));
+        console.log("Key-Value Pairs", this.keyValuePairs);
+      },
+      (error) => {
+        this.toastr.error("Some Error Occurred !!", "", { timeOut: 2000 });
+      }
+    );
+  }
+  
 
   removeKeyValuePair(index: number) {
     this.keyValuePairs.splice(index, 1);

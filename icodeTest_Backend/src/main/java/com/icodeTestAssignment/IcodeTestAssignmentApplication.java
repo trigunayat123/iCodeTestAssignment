@@ -10,4 +10,3 @@ public class IcodeTestAssignmentApplication {
 		SpringApplication.run(IcodeTestAssignmentApplication.class, args);
 	}
 }
- 
