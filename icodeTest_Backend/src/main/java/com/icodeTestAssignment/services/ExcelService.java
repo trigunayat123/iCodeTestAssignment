@@ -13,13 +13,11 @@ public class ExcelService {
 	public Workbook generateExcel(Map<String, String> templateData) {
 		Workbook workbook = new XSSFWorkbook();
 		Sheet sheet = workbook.createSheet("Data");
-		int rowNum = 0;
+		Row row = sheet.createRow(0);
+		int col=0;
 		for (Map.Entry<String, String> entry : templateData.entrySet()) {
-			Row row = sheet.createRow(rowNum++);
-			Cell keyCell = row.createCell(0);
+			Cell keyCell = row.createCell(col++);
 			keyCell.setCellValue(entry.getKey());
-			Cell valueCell = row.createCell(1);
-			valueCell.setCellValue(entry.getValue());
 		}
 
 		return workbook;
